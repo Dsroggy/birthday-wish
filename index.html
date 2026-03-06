@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Amar Sona Mam</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff4e8a,#ff9a9e);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:30px;
+}
+
+h1{
+font-size:50px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 30px #fff;}
+}
+
+.message{
+max-width:700px;
+margin:auto;
+font-size:20px;
+line-height:1.6;
+padding:20px;
+background:rgba(0,0,0,0.3);
+border-radius:15px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.video-section{
+padding:30px;
+}
+
+video{
+width:80%;
+max-width:600px;
+border-radius:15px;
+margin:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.footer{
+margin-top:30px;
+font-size:18px;
+opacity:0.8;
+}
+
+.heart{
+position:fixed;
+color:white;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday Amar Sona Mam 🎂</h1>
+
+<div class="message">
+
+<p>
+Aaj ka din duniya ka sabse special din hai kyunki aaj meri life ki
+sabse beautiful girl ka birthday hai ❤️
+</p>
+
+<p>
+Tum meri life ki sabse pyari khushi ho.  
+Tumhari smile meri duniya roshan kar deti hai.  
+Main dua karta hu ki tumhari life hamesha happiness,
+love aur success se bhari rahe.
+</p>
+
+<p>
+Happy Birthday Amar Sona Mam 💖  
+Stay blessed, stay beautiful.
+</p>
+
+</div>
+
+</div>
+
+<h2>📸 Our Beautiful Memories</h2>
+
+<div class="gallery">
+
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+<img src="img5.jpg">
+
+</div>
+
+<h2>🎥 Special Videos</h2>
+
+<div class="video-section">
+
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="video2.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div class="footer">
+Made with ❤️ by Someone who loves you
+</div>
+
+<script>
+
+function createHeart(){
+const heart=document.createElement("div")
+heart.classList.add("heart")
+heart.innerHTML="❤️"
+heart.style.left=Math.random()*100+"vw"
+heart.style.fontSize=(Math.random()*20+20)+"px"
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},6000)
+}
+
+setInterval(createHeart,300)
+
+</script>
+
+</body>
+</html>
