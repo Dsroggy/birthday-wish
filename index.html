@@ -10,14 +10,14 @@
 body{
 margin:0;
 font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#ff4e8a,#ff9a9e);
+background: linear-gradient(135deg,#ff4e8a,#ff9a9e,#ffc3a0);
 color:white;
 text-align:center;
 overflow-x:hidden;
 }
 
 .container{
-padding:30px;
+padding:40px 20px;
 }
 
 h1{
@@ -27,35 +27,47 @@ animation: glow 2s infinite alternate;
 
 @keyframes glow{
 from{ text-shadow:0 0 10px white;}
-to{ text-shadow:0 0 30px #fff;}
+to{ text-shadow:0 0 30px white;}
 }
 
 .message{
-max-width:700px;
+max-width:750px;
 margin:auto;
 font-size:20px;
-line-height:1.6;
-padding:20px;
+line-height:1.7;
+padding:25px;
 background:rgba(0,0,0,0.3);
 border-radius:15px;
+backdrop-filter: blur(10px);
 }
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-padding:40px;
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
 }
 
-.gallery img{
-width:100%;
+.photo-box{
+display:flex;
+align-items:center;
+margin-bottom:30px;
+background:rgba(0,0,0,0.25);
 border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,0.5);
-transition:0.3s;
+padding:15px;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.photo-box img{
+width:250px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.caption{
+font-size:18px;
+max-width:500px;
+text-align:left;
 }
 
 .video-section{
@@ -66,14 +78,14 @@ video{
 width:80%;
 max-width:600px;
 border-radius:15px;
-margin:15px;
+margin:20px;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 .footer{
-margin-top:30px;
+margin-top:40px;
 font-size:18px;
-opacity:0.8;
+opacity:0.9;
 }
 
 .heart{
@@ -99,20 +111,23 @@ animation: float 6s linear infinite;
 <div class="message">
 
 <p>
-Aaj ka din duniya ka sabse special din hai kyunki aaj meri life ki
-sabse beautiful girl ka birthday hai ❤️
+Aaj ka din meri life ka sabse special din hai ❤️  
+Kyuki aaj meri life ki sabse beautiful aur precious person ka birthday hai.
 </p>
 
 <p>
-Tum meri life ki sabse pyari khushi ho.  
-Tumhari smile meri duniya roshan kar deti hai.  
-Main dua karta hu ki tumhari life hamesha happiness,
-love aur success se bhari rahe.
+Tum meri life ki wo smile ho jo har problem ko chhota bana deti hai.  
+Tum meri khushi ho, meri inspiration ho aur meri duniya ho.
+</p>
+
+<p>
+Main bas itna chahta hu ki tum hamesha khush raho,  
+tumhari life me kabhi sadness na aaye.
 </p>
 
 <p>
 Happy Birthday Amar Sona Mam 💖  
-Stay blessed, stay beautiful.
+You are the most beautiful part of my life.
 </p>
 
 </div>
@@ -123,15 +138,49 @@ Stay blessed, stay beautiful.
 
 <div class="gallery">
 
+<div class="photo-box">
 <img src="img1.jpg">
+<div class="caption">
+This moment reminds me how lucky I am to have you in my life.  
+Your smile in this picture makes my whole world brighter. ❤️
+</div>
+</div>
+
+<div class="photo-box">
 <img src="img2.jpg">
+<div class="caption">
+Every memory with you is like a beautiful dream.  
+I wish time could stop in these moments forever. 💖
+</div>
+</div>
+
+<div class="photo-box">
 <img src="img3.jpg">
+<div class="caption">
+Looking at this picture reminds me how special you are to me.  
+You make my life colorful and full of love. 🌸
+</div>
+</div>
+
+<div class="photo-box">
 <img src="img4.jpg">
+<div class="caption">
+In this moment I realized how perfect life feels when you are with me.  
+You are truly my happiness. ❤️
+</div>
+</div>
+
+<div class="photo-box">
 <img src="img5.jpg">
+<div class="caption">
+No matter how many pictures we take,  
+none can capture how beautiful you truly are. 💕
+</div>
+</div>
 
 </div>
 
-<h2>🎥 Special Videos</h2>
+<h2>🎥 Special Videos For You</h2>
 
 <div class="video-section">
 
@@ -139,14 +188,18 @@ Stay blessed, stay beautiful.
 <source src="video1.mp4" type="video/mp4">
 </video>
 
+<p>Every second with you feels magical. This video reminds me of our beautiful moments together. ❤️</p>
+
 <video controls>
 <source src="video2.mp4" type="video/mp4">
 </video>
 
+<p>This memory will always stay close to my heart. You are my favorite person forever. 💖</p>
+
 </div>
 
 <div class="footer">
-Made with ❤️ by Someone who loves you
+Made with ❤️ for Amar Sona Mam
 </div>
 
 <script>
