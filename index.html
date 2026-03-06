@@ -9,8 +9,8 @@
 
 body{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#ff4e8a,#ff9a9e,#ffc3a0);
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff4e8a,#ff9a9e,#ffc3a0);
 color:white;
 text-align:center;
 overflow-x:hidden;
@@ -21,13 +21,24 @@ padding:40px 20px;
 }
 
 h1{
-font-size:50px;
-animation: glow 2s infinite alternate;
+font-size:55px;
+animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
 from{ text-shadow:0 0 10px white;}
-to{ text-shadow:0 0 30px white;}
+to{ text-shadow:0 0 35px white;}
+}
+
+.birthday-text{
+font-size:30px;
+margin-top:10px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
 }
 
 .message{
@@ -38,7 +49,7 @@ line-height:1.7;
 padding:25px;
 background:rgba(0,0,0,0.3);
 border-radius:15px;
-backdrop-filter: blur(10px);
+backdrop-filter:blur(10px);
 }
 
 .gallery{
@@ -88,15 +99,44 @@ font-size:18px;
 opacity:0.9;
 }
 
+/* Heart rain */
+
 .heart{
 position:fixed;
-color:white;
-animation: float 6s linear infinite;
+top:-10px;
+color:#ff2e6e;
+font-size:24px;
+animation:fall linear forwards;
+pointer-events:none;
 }
 
-@keyframes float{
-0%{transform:translateY(100vh);opacity:1;}
-100%{transform:translateY(-10vh);opacity:0;}
+@keyframes fall{
+0%{
+transform:translateY(-10vh) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Confetti */
+
+.confetti{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+0%{
+transform:translateY(-10vh) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(720deg);
+}
 }
 
 </style>
@@ -107,6 +147,12 @@ animation: float 6s linear infinite;
 <div class="container">
 
 <h1>🎂 Happy Birthday Amar Sona Mam 🎂</h1>
+
+<div class="birthday-text">
+🎉 Wishing You a Day Full of Love & Happiness 🎉
+</div>
+
+<br>
 
 <div class="message">
 
@@ -142,39 +188,35 @@ You are the most beautiful part of my life.
 <img src="img1.jpg">
 <div class="caption">
 This moment reminds me how lucky I am to have you in my life.  
-Your smile in this picture makes my whole world brighter. ❤️
+Your smile makes my whole world brighter. ❤️
 </div>
 </div>
 
 <div class="photo-box">
 <img src="img2.jpg">
 <div class="caption">
-Every memory with you is like a beautiful dream.  
-I wish time could stop in these moments forever. 💖
+Every memory with you feels like a beautiful dream. 💖
 </div>
 </div>
 
 <div class="photo-box">
 <img src="img3.jpg">
 <div class="caption">
-Looking at this picture reminds me how special you are to me.  
-You make my life colorful and full of love. 🌸
+You make my life colorful and full of happiness. 🌸
 </div>
 </div>
 
 <div class="photo-box">
 <img src="img4.jpg">
 <div class="caption">
-In this moment I realized how perfect life feels when you are with me.  
-You are truly my happiness. ❤️
+Life feels perfect when you are with me. ❤️
 </div>
 </div>
 
 <div class="photo-box">
 <img src="img5.jpg">
 <div class="caption">
-No matter how many pictures we take,  
-none can capture how beautiful you truly are. 💕
+No picture can capture how beautiful you truly are. 💕
 </div>
 </div>
 
@@ -188,13 +230,13 @@ none can capture how beautiful you truly are. 💕
 <source src="video1.mp4" type="video/mp4">
 </video>
 
-<p>Every second with you feels magical. This video reminds me of our beautiful moments together. ❤️</p>
+<p>Every second with you feels magical. ❤️</p>
 
 <video controls>
 <source src="video2.mp4" type="video/mp4">
 </video>
 
-<p>This memory will always stay close to my heart. You are my favorite person forever. 💖</p>
+<p>This memory will always stay close to my heart. 💖</p>
 
 </div>
 
@@ -204,20 +246,77 @@ Made with ❤️ for Amar Sona Mam
 
 <script>
 
+/* Heart Rain */
+
 function createHeart(){
+
 const heart=document.createElement("div")
 heart.classList.add("heart")
 heart.innerHTML="❤️"
+
 heart.style.left=Math.random()*100+"vw"
-heart.style.fontSize=(Math.random()*20+20)+"px"
+heart.style.fontSize=(Math.random()*25+20)+"px"
+heart.style.animationDuration=(Math.random()*3+4)+"s"
+
 document.body.appendChild(heart)
 
 setTimeout(()=>{
 heart.remove()
-},6000)
+},7000)
+
 }
 
-setInterval(createHeart,300)
+setInterval(createHeart,200)
+
+
+/* Click Heart Burst */
+
+document.addEventListener("click",function(e){
+
+for(let i=0;i<8;i++){
+
+const heart=document.createElement("div")
+heart.classList.add("heart")
+heart.innerHTML="❤️"
+
+heart.style.left=e.clientX+"px"
+heart.style.top=e.clientY+"px"
+heart.style.animationDuration="3s"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},3000)
+
+}
+
+})
+
+
+/* Confetti */
+
+function createConfetti(){
+
+const confetti=document.createElement("div")
+confetti.classList.add("confetti")
+
+const emojis=["🎉","🎊","✨","💖"]
+
+confetti.innerHTML=emojis[Math.floor(Math.random()*emojis.length)]
+
+confetti.style.left=Math.random()*100+"vw"
+confetti.style.animationDuration=(Math.random()*3+3)+"s"
+
+document.body.appendChild(confetti)
+
+setTimeout(()=>{
+confetti.remove()
+},6000)
+
+}
+
+setInterval(createConfetti,500)
 
 </script>
 
