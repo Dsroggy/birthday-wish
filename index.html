@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DSR Download Hub</title>
+
+<!-- Website Logo (Browser Tab Icon) -->
+
+<link rel="icon" type="image/png" href="icons/logo.png">
 
 <style>
 
@@ -14,13 +20,28 @@ color:white;
 margin:0;
 }
 
+/* HEADER */
+
 header{
 background:#1e293b;
-padding:15px;
-text-align:center;
+padding:10px 20px;
+display:flex;
+align-items:center;
+gap:12px;
 font-size:24px;
 font-weight:bold;
 }
+
+/* HEADER LOGO */
+
+.logo{
+width:45px;
+height:45px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* GRID */
 
 .container{
 padding:20px;
@@ -37,7 +58,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.4);
 text-align:center;
 }
 
-/* ICON CIRCLE STYLE */
+/* APP ICON */
 
 .app-icon{
 width:80px;
@@ -75,12 +96,17 @@ margin-top:20px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-DSR Download Hub
+
+<img src="icons/logo.png" class="logo">
+
+<span>DSR Download Hub</span>
+
 </header>
 
 <div class="container">
