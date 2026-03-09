@@ -3,140 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Amar Sona Mam</title>
+<title>DSR Download Hub</title>
 
 <style>
 
 body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:linear-gradient(135deg,#ff4e8a,#ff9a9e,#ffc3a0);
+font-family:Segoe UI;
+background:#0f172a;
 color:white;
+margin:0;
+}
+
+header{
+background:#1e293b;
+padding:15px;
 text-align:center;
-overflow-x:hidden;
+font-size:24px;
+font-weight:bold;
 }
 
 .container{
-padding:40px 20px;
-}
-
-h1{
-font-size:55px;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{ text-shadow:0 0 10px white;}
-to{ text-shadow:0 0 35px white;}
-}
-
-.birthday-text{
-font-size:30px;
-margin-top:10px;
-animation:bounce 2s infinite;
-}
-
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-}
-
-.message{
-max-width:750px;
-margin:auto;
-font-size:20px;
-line-height:1.7;
-padding:25px;
-background:rgba(0,0,0,0.3);
-border-radius:15px;
-backdrop-filter:blur(10px);
-}
-
-.gallery{
-max-width:1000px;
-margin:auto;
-padding:40px 20px;
-}
-
-.photo-box{
-display:flex;
-align-items:center;
-margin-bottom:30px;
-background:rgba(0,0,0,0.25);
-border-radius:15px;
-padding:15px;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-flex-wrap:wrap;
 }
 
-.photo-box img{
-width:250px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,0,0,0.5);
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+text-align:center;
 }
 
-.caption{
-font-size:18px;
-max-width:500px;
-text-align:left;
+.card h3{
+margin:10px 0;
 }
 
-.video-section{
-padding:30px;
+.download-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
 }
 
-video{
-width:80%;
-max-width:600px;
-border-radius:15px;
-margin:20px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+.download-btn:hover{
+background:#16a34a;
 }
 
-.footer{
-margin-top:40px;
-font-size:18px;
-opacity:0.9;
-}
-
-/* Heart rain */
-
-.heart{
-position:fixed;
-top:-10px;
-color:#ff2e6e;
-font-size:24px;
-animation:fall linear forwards;
-pointer-events:none;
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-10vh) rotate(0deg);
-opacity:1;
-}
-100%{
-transform:translateY(110vh) rotate(360deg);
-opacity:0;
-}
-}
-
-/* Confetti */
-
-.confetti{
-position:fixed;
-top:-10px;
-font-size:20px;
-animation:confettiFall linear forwards;
-}
-
-@keyframes confettiFall{
-0%{
-transform:translateY(-10vh) rotate(0deg);
-}
-100%{
-transform:translateY(110vh) rotate(720deg);
-}
+footer{
+text-align:center;
+padding:15px;
+background:#1e293b;
+margin-top:20px;
 }
 
 </style>
@@ -144,181 +68,35 @@ transform:translateY(110vh) rotate(720deg);
 
 <body>
 
+<header>
+DSR Download Hub
+</header>
+
 <div class="container">
 
-<h1>🎂 Happy Birthday Amar Sona Mam 🎂</h1>
-
-<div class="birthday-text">
-🎉 Wishing You a Day Full of Love & Happiness 🎉
+<div class="card">
+<h3>Sample App</h3>
+<p>Android Application</p>
+<a class="download-btn" href="files/app.apk" download>Download</a>
 </div>
 
-<br>
+<div class="card">
+<h3>PDF Document</h3>
+<p>Important Notes</p>
+<a class="download-btn" href="files/notes.pdf" download>Download</a>
+</div>
 
-<div class="message">
-
-<p>
-Aaj ka din meri life ka sabse special din hai ❤️  
-Kyuki aaj meri life ki sabse beautiful aur precious person ka birthday hai.
-</p>
-
-<p>
-Tum meri life ki wo smile ho jo har problem ko chhota bana deti hai.  
-Tum meri khushi ho, meri inspiration ho aur meri duniya ho.
-</p>
-
-<p>
-Main bas itna chahta hu ki tum hamesha khush raho,  
-tumhari life me kabhi sadness na aaye.
-</p>
-
-<p>
-Happy Birthday Amar Sona Mam 💖  
-You are the most beautiful part of my life.
-</p>
-
+<div class="card">
+<h3>ZIP File</h3>
+<p>Project Source Code</p>
+<a class="download-btn" href="files/project.zip" download>Download</a>
 </div>
 
 </div>
 
-<h2>📸 Our Beautiful Memories</h2>
-
-<div class="gallery">
-
-<div class="photo-box">
-<img src="img1.jpg">
-<div class="caption">
-This moment reminds me how lucky I am to have you in my life.  
-Your smile makes my whole world brighter. ❤️
-</div>
-</div>
-
-<div class="photo-box">
-<img src="img2.jpg">
-<div class="caption">
-Every memory with you feels like a beautiful dream. 💖
-</div>
-</div>
-
-<div class="photo-box">
-<img src="img3.jpg">
-<div class="caption">
-You make my life colorful and full of happiness. 🌸
-</div>
-</div>
-
-<div class="photo-box">
-<img src="img4.jpg">
-<div class="caption">
-Life feels perfect when you are with me. ❤️
-</div>
-</div>
-
-<div class="photo-box">
-<img src="img5.jpg">
-<div class="caption">
-No picture can capture how beautiful you truly are. 💕
-</div>
-</div>
-
-</div>
-
-<h2>🎥 Special Videos For You</h2>
-
-<div class="video-section">
-
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-
-<p>Every second with you feels magical. ❤️</p>
-
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-
-<p>This memory will always stay close to my heart. 💖</p>
-
-</div>
-
-<div class="footer">
-Made with ❤️ for Amar Sona Mam
-</div>
-
-<script>
-
-/* Heart Rain */
-
-function createHeart(){
-
-const heart=document.createElement("div")
-heart.classList.add("heart")
-heart.innerHTML="❤️"
-
-heart.style.left=Math.random()*100+"vw"
-heart.style.fontSize=(Math.random()*25+20)+"px"
-heart.style.animationDuration=(Math.random()*3+4)+"s"
-
-document.body.appendChild(heart)
-
-setTimeout(()=>{
-heart.remove()
-},7000)
-
-}
-
-setInterval(createHeart,200)
-
-
-/* Click Heart Burst */
-
-document.addEventListener("click",function(e){
-
-for(let i=0;i<8;i++){
-
-const heart=document.createElement("div")
-heart.classList.add("heart")
-heart.innerHTML="❤️"
-
-heart.style.left=e.clientX+"px"
-heart.style.top=e.clientY+"px"
-heart.style.animationDuration="3s"
-
-document.body.appendChild(heart)
-
-setTimeout(()=>{
-heart.remove()
-},3000)
-
-}
-
-})
-
-
-/* Confetti */
-
-function createConfetti(){
-
-const confetti=document.createElement("div")
-confetti.classList.add("confetti")
-
-const emojis=["🎉","🎊","✨","💖"]
-
-confetti.innerHTML=emojis[Math.floor(Math.random()*emojis.length)]
-
-confetti.style.left=Math.random()*100+"vw"
-confetti.style.animationDuration=(Math.random()*3+3)+"s"
-
-document.body.appendChild(confetti)
-
-setTimeout(()=>{
-confetti.remove()
-},6000)
-
-}
-
-setInterval(createConfetti,500)
-
-</script>
+<footer>
+© 2026 DSR Hub
+</footer>
 
 </body>
 </html>
